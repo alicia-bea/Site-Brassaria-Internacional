@@ -1,0 +1,35 @@
+/* ==========================================================
+   components/age-gate.css
+   Confirmação de maioridade (js/ui/age-gate.js).
+   ========================================================== */
+
+
+/* Confirmação de idade, exibida apenas na página inicial */
+
+.age-overlay[hidden] { display:none }
+
+.age-overlay { position:fixed; inset:0; z-index:9999; background:rgba(16,21,11,.87); display:grid; place-items:center; padding:18px; backdrop-filter:blur(7px) }
+
+.age-locked { overflow:hidden }
+
+.age-dialog { width:min(100%,530px); background:var(--cream); color:var(--olive-dark); border:1px solid var(--gold); padding:clamp(28px,5vw,52px); text-align:center; box-shadow:0 28px 80px rgba(0,0,0,.4) }
+
+.age-eyebrow { font:500 12px var(--display); letter-spacing:.18em; color:#6b7043 }
+
+.age-symbol { font:700 80px/.9 var(--display); color:var(--olive); margin:24px auto 16px }
+
+.age-symbol span { display:block; font:600 16px var(--display); letter-spacing:.3em; color:#a37718 }
+
+.age-dialog h2 { font:600 clamp(32px,5vw,46px)/1.05 var(--display); text-transform:uppercase; margin:18px 0 }
+
+.age-dialog p { font-size:21px; line-height:1.4 }
+
+.age-actions { display:grid; gap:12px; margin:28px 0 20px }
+
+.age-actions .btn { font-size:19px; width:100% }
+
+.age-dialog small { display:block; font:13px/1.5 Arial,sans-serif; color:#686a55 }
+
+@media (max-width: 600px) {
+    .age-dialog { padding:26px 20px }
+}

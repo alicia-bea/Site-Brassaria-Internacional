@@ -1,0 +1,21 @@
+/* ==========================================================
+   base/variables.css
+   Variáveis globais (cores, fontes, sombra).
+   ========================================================== */
+
+
+:root {
+    --olive: #41451f;
+    --olive-dark: #343817;
+    --cream: #f8f2df;
+    --gold: #efa900;
+    --pale: #e5e99a;
+    --pale-card: #e9e9b0;
+    --ink: #292b19;
+    --line: #aaa985;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --display: 'Oswald', 'Arial Narrow', sans-serif;
+}
+
+:root { --shadow: 0 20px 55px rgba(35,40,20,.12); }

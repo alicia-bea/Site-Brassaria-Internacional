@@ -1,0 +1,90 @@
+/* ==========================================================
+   pages/home.css
+   Página inicial: introdução, título principal e chamadas.
+   ========================================================== */
+
+
+.home-intro {
+    padding: 36px clamp(24px, 5vw, 84px) 18px;
+}
+
+.headline-row {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    min-height: 92px;
+}
+
+.beer-trio {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex: none;
+    color: #765538;
+}
+
+.hero-title {
+    font: 600 clamp(35px, 4.2vw, 62px)/1.08 var(--display);
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+    letter-spacing: .2px;
+}
+
+.intro-copy {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 18px 0 34px;
+    max-width: 1320px;
+}
+
+.intro-copy p {
+    font-size: clamp(22px, 2vw, 31px);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+    max-width: 740px;
+}
+
+.actions {
+    display: flex;
+    gap: 22px;
+    margin-left: 58px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 760px) {
+    .intro-copy { flex-wrap: wrap; }
+    .headline-row {
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .beer-trio {
+        gap: 2px;
+    }
+    .hero-title {
+        font-size: clamp(30px, 7vw, 44px);
+    }
+    .intro-copy {
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .intro-copy p {
+        font-size: 22px;
+    }
+    .actions {
+        margin-left: 42px;
+        gap: 12px;
+    }
+}
+
+.home-intro { max-width:1400px; margin:auto; padding-top:65px; padding-bottom:55px; }
+
+.hero-title { color:var(--olive); font-size:clamp(34px,4vw,55px); }
+
+@media (max-width: 760px) {
+    .home-intro { padding-top:42px; }
+    .beer-trio { display:none; }
+    .actions { margin-left:0; }
+}

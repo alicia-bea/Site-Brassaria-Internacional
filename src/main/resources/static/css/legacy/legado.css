@@ -1,0 +1,225 @@
+/* ==========================================================
+   legacy/legado.css
+   CÓDIGO LEGADO: classes que não aparecem mais em nenhum HTML/JS. Pode ser removido após conferência.
+   ========================================================== */
+
+
+.brand-seal {
+    width: 122px;
+    height: 122px;
+    flex: none;
+    border: 2px solid var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--pale);
+    text-align: center;
+}
+
+.brand-seal:before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 1px solid var(--cream);
+    border-radius: 50%;
+}
+
+.seal-top {
+    position: absolute;
+    top: 12px;
+    font: 600 9px Arial;
+    letter-spacing: 3px;
+}
+
+.seal-script {
+    font: italic 23px var(--serif);
+    line-height: 1;
+}
+
+.seal-bottom {
+    position: absolute;
+    bottom: 12px;
+    font: 600 8px Arial;
+    letter-spacing: 3px;
+}
+
+.dotted-rule {
+    height: 0;
+    border-top: 5px dotted var(--olive);
+    flex: 1;
+    min-width: 35px;
+}
+
+.price-mark {
+    font-size: 25px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--olive);
+}
+
+.values-heading {
+    max-width: 650px;
+    margin: 8px 0 62px;
+    padding: 10px 0 13px 36px;
+    border-top: 2px solid var(--olive);
+    border-bottom: 2px solid var(--olive);
+    position: relative;
+}
+
+.values-heading:after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    right: 0;
+    bottom: 6px;
+    height: 32px;
+    background: var(--olive);
+    opacity: .72;
+    z-index: 0;
+}
+
+.values-heading h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font: 600 clamp(39px, 4.2vw, 62px)/1.1 var(--display);
+    color: var(--gold);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(25px, 5vw, 78px);
+    padding: 0 8%;
+}
+
+.value-card {
+    background: var(--pale-card);
+    border: 3px solid var(--line);
+    border-radius: 16px;
+    min-height: 280px;
+    padding: 22px 34px;
+}
+
+.value-card h2 {
+    text-align: center;
+    font: 600 32px var(--display);
+    color: var(--olive);
+    text-transform: uppercase;
+    margin: 0 0 14px;
+}
+
+.value-card p {
+    text-align: justify;
+    font-size: 21px;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.conscious-banner {
+    margin: 78px 2.5% 0;
+    background: var(--olive);
+    border-radius: 100px;
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+}
+
+.conscious-banner h2 {
+    font: 600 29px var(--display);
+    color: var(--gold);
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.conscious-banner p {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 1100px) {
+    .brand-seal {
+        width: 100px;
+        height: 100px;
+    }
+    .values-grid {
+        padding: 0 2%;
+        gap: 24px;
+    }
+    .value-card {
+        padding: 22px;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+    .brand-seal {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+@media (max-width: 760px) {
+    .brand-seal {
+        width: 68px;
+        height: 68px;
+    }
+    .seal-top {
+        top: 7px;
+        font-size: 6px;
+    }
+    .seal-bottom {
+        bottom: 7px;
+        font-size: 6px;
+    }
+    .seal-script {
+        font-size: 16px;
+    }
+    .dotted-rule,
+    .price-mark {
+        display: none;
+    }
+    .values-heading {
+        margin-bottom: 35px;
+        padding-left: 15px;
+    }
+    .values-heading h1 {
+        font-size: 37px;
+        white-space: normal;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: auto;
+    }
+    .value-card {
+        min-height: 0;
+    }
+    .conscious-banner {
+        border-radius: 28px;
+        padding: 25px;
+        display: block;
+        margin-top: 45px;
+    }
+    .conscious-banner h2 {
+        white-space: normal;
+        margin-bottom: 12px;
+    }
+    .conscious-banner p {
+        font-size: 21px;
+    }
+}
+
+.value-card:hover { transform:translateY(-4px); box-shadow:0 26px 55px rgba(35,40,20,.18); }
+
+.values-heading h1 { color:var(--olive); }
+
+.value-card { transition:transform .2s,box-shadow .2s; border:1px solid var(--line); box-shadow:var(--shadow); }

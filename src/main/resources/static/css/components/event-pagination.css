@@ -1,0 +1,27 @@
+/* ==========================================================
+   components/event-pagination.css
+   Botões "Ver mais" / "Ver menos eventos".
+   ========================================================== */
+
+
+.ver-mais-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+#btn-ver-mais,
+#btn-ver-menos {
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#btn-ver-mais:hover,
+#btn-ver-menos:hover {
+    background-color: var(--gold);
+    color: var(--olive);
+    transform: translateY(-2px);
+}

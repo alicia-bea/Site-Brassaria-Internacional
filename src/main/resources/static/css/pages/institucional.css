@@ -1,0 +1,121 @@
+/* ==========================================================
+   pages/institucional.css
+   Página institucional: layout editorial (hero, manifesto, pilares, consciência).
+   ========================================================== */
+
+
+.institutional-page { overflow:hidden; }
+
+.institutional-hero { min-height:610px; display:grid; grid-template-columns: 1.12fr .88fr; background:var(--olive-dark); color:var(--cream); }
+
+.institutional-hero-content { padding:clamp(65px,8vw,125px) clamp(28px,7vw,115px); align-self:center; }
+
+.institutional-kicker { display:inline-flex; align-items:center; gap:14px; font:500 13px/1.4 var(--display); letter-spacing:.17em; color:var(--pale); }
+
+.kicker-line { width:30px; height:2px; background:var(--gold); }
+
+.institutional-hero h1 { font:600 clamp(62px,7vw,120px)/.94 var(--display); letter-spacing:-.045em; margin:35px 0 30px; }
+
+.institutional-hero h1 em,.institutional-conscious h2 em { color:var(--gold); font-style:normal; }
+
+.institutional-hero-content>p { max-width:580px; font-size:clamp(20px,2vw,25px); line-height:1.42; color:#e0dfc9; }
+
+.institutional-text-link { display:inline-flex; align-items:center; gap:28px; margin-top:30px; border-bottom:1px solid var(--gold); padding-bottom:12px; color:var(--gold); font:500 15px var(--display); letter-spacing:.09em; }
+
+.institutional-text-link span,.institutional-cta span { font-size:25px; }
+
+.institutional-hero-art { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:480px; overflow:hidden; background:linear-gradient(145deg,#e9e9b0,#d5d69a); color:var(--olive-dark); }
+
+.institutional-hero-art::before { content:''; position:absolute; width:85%; aspect-ratio:1; border:1px solid rgba(65,69,31,.25); border-radius:50%; box-shadow:0 0 0 40px rgba(65,69,31,.045),0 0 0 90px rgba(65,69,31,.035); }
+
+.institutional-art-ring { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; width:min(65%,340px); aspect-ratio:1; border:3px solid var(--olive); border-radius:50%; transform:rotate(-9deg); }
+
+.institutional-art-ring span { font:600 clamp(100px,12vw,185px)/.9 var(--display); letter-spacing:-.08em; }
+
+.institutional-art-ring small { font:600 20px var(--display); letter-spacing:.5em; }
+
+.institutional-art-caption { position:relative; z-index:1; margin-top:32px; font:600 17px var(--display); letter-spacing:.25em; }
+
+.institutional-art-caption span { color:#a17619; padding:0 8px; }
+
+.institutional-art-grid { position:absolute; bottom:0; left:0; right:0; height:40px; opacity:.2; background:conic-gradient(var(--olive) 25%,transparent 0 50%,var(--olive) 0 75%,transparent 0) 0 0/50px 50px; }
+
+.institutional-manifesto,.institutional-pillars { max-width:1450px; margin:auto; padding:clamp(70px,8vw,125px) clamp(25px,6vw,90px); }
+
+.institutional-section-label { display:flex; align-items:center; gap:25px; font:600 14px var(--display); letter-spacing:.12em; color:var(--olive); margin-bottom:55px; }
+
+.institutional-rule { height:1px; background:#aaa985; flex:1; }
+
+.institutional-manifesto-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(35px,7vw,115px); align-items:center; }
+
+.institutional-manifesto h2,.institutional-pillars-heading h2 { font:600 clamp(45px,5.6vw,82px)/1.02 var(--display); letter-spacing:-.025em; color:var(--olive); margin:0; }
+
+.institutional-manifesto h2 span { color:#ac811e; }
+
+.institutional-manifesto-copy { border-left:3px solid var(--gold); padding-left:35px; }
+
+.institutional-manifesto-copy p { font-size:clamp(21px,2vw,27px); line-height:1.4; margin:0 0 20px; }
+
+.institutional-pillars { padding-top:40px; }
+
+.institutional-pillars-heading { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:38px; }
+
+.institutional-pillars-heading p { max-width:340px; font-size:21px; margin:0; }
+
+.institutional-pillars-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+
+.institutional-pillar { background:var(--olive); color:var(--cream); min-height:355px; padding:30px; display:flex; flex-direction:column; transition:transform .2s,background .2s; }
+
+.institutional-pillar:nth-child(2) { background:#555a2c; }
+
+.institutional-pillar:nth-child(3) { background:#343817; }
+
+.institutional-pillar:hover { transform:translateY(-5px); }
+
+.pillar-top { display:flex; justify-content:space-between; color:var(--pale); font:600 17px var(--display); }
+
+.pillar-top span:last-child { font-size:27px; }
+
+.institutional-pillar h3 { font:600 clamp(38px,4vw,56px)/1 var(--display); color:var(--gold); margin:auto 0 18px; }
+
+.institutional-pillar p { font-size:21px; line-height:1.35; margin:0; }
+
+.institutional-conscious { background:#e7e8ac; color:var(--olive-dark); padding:clamp(65px,7vw,110px) clamp(28px,9vw,150px); display:grid; grid-template-columns:180px 1fr; gap:clamp(30px,6vw,100px); align-items:center; }
+
+.institutional-conscious-symbol { font:180px/.9 var(--display); color:#9a9d5b; }
+
+.institutional-conscious .institutional-kicker { color:#626936; }
+
+.institutional-conscious h2 { font:600 clamp(40px,5vw,72px)/1.05 var(--display); letter-spacing:-.02em; margin:24px 0; }
+
+.institutional-conscious h2 em { color:#a57600; }
+
+.institutional-conscious p { font-size:clamp(20px,2vw,26px); max-width:720px; }
+
+.institutional-cta { display:inline-flex; align-items:center; gap:28px; margin-top:16px; background:var(--olive); color:var(--cream); padding:13px 23px; font:500 15px var(--display); letter-spacing:.07em; }
+
+.institutional-cta:hover { background:var(--olive-dark); }
+
+@media (max-width: 900px) {
+    .institutional-hero { grid-template-columns:1fr; }
+    .institutional-hero-art { min-height:360px; }
+    .institutional-art-ring { width:250px; }
+    .institutional-art-ring span { font-size:130px; }
+    .institutional-manifesto-grid { grid-template-columns:1fr; }
+    .institutional-pillars-grid { grid-template-columns:1fr; }
+    .institutional-pillar { min-height:240px; }
+    .institutional-conscious { grid-template-columns:1fr; }
+    .institutional-conscious-symbol { display:none; }
+}
+
+@media (max-width: 600px) {
+    .institutional-hero-content { padding:65px 26px; }
+    .institutional-hero h1 { font-size:clamp(56px,14vw,78px); }
+    .institutional-hero-art { min-height:320px; }
+    .institutional-manifesto,.institutional-pillars { padding:65px 25px; }
+    .institutional-section-label { margin-bottom:32px; }
+    .institutional-pillars-heading { display:block; }
+    .institutional-pillars-heading p { margin-top:18px; }
+    .institutional-pillar { padding:25px; }
+    .institutional-conscious { padding:65px 25px; }
+}

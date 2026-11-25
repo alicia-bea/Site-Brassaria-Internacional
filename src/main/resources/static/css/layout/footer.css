@@ -1,0 +1,93 @@
+/* ==========================================================
+   layout/footer.css
+   Rodapé do site (o HTML é gerado por js/ui/rodape.js).
+   ========================================================== */
+
+
+.site-footer {
+    height: 75px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--olive) 0 68px,
+        var(--cream) 68px 140px
+    );
+    margin-top: 0;
+}
+
+.site-footer:after {
+    content: "";
+    display: block;
+    height: 36px;
+    position: relative;
+    top: 36px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--cream) 0 68px,
+        var(--olive) 68px 140px
+    );
+}
+
+.footer-kicker { font:500 13px var(--display); letter-spacing:.22em; color:var(--pale); }
+
+.site-footer { height:auto; background:var(--olive-dark); color:#f8f2df; padding:0; margin-top:40px; }
+
+.site-footer::after { display:none; }
+
+.footer-inner { max-width:1380px; margin:auto; padding:65px 30px 45px; display:grid; grid-template-columns:2fr 1fr 1fr; gap:60px; }
+
+.footer-about h2 { font:600 clamp(30px,3vw,44px)/1.1 var(--display); text-transform:uppercase; margin:16px 0; max-width:480px; }
+
+.footer-about p,.footer-signature p { max-width:400px; color:#d8d9c4; font-size:17px; }
+
+.footer-links { display:flex; flex-direction:column; gap:9px; }
+
+.footer-links h3 { font:600 20px var(--display); color:var(--gold); text-transform:uppercase; margin:0 0 10px; }
+
+.footer-links a { font-size:17px; }
+
+.footer-links a:hover { color:var(--gold); }
+
+.footer-monogram { display:inline-flex; align-items:center; gap:12px; font:600 95px/.9 var(--display); color:var(--gold); }
+
+.footer-monogram span { font:600 26px var(--display); letter-spacing:.1em; }
+
+.footer-bottom { border-top:1px solid rgba(255,255,255,.17); padding:18px max(30px,calc((100vw - 1320px)/2)); display:flex; justify-content:space-between; gap:20px; font:13px Arial,sans-serif; color:#c5c7ae; }
+
+@media (max-width: 1100px) {
+    .footer-inner { gap:25px; }
+}
+
+@media (max-width: 760px) {
+    .footer-inner { grid-template-columns:1fr; padding:45px 25px; gap:35px; }
+    .footer-bottom { flex-direction:column; padding:18px 25px; }
+}
+
+/* Transição de identidade: quadriculado que se dissolve no verde do rodapé. */
+
+.site-footer {
+  position: relative;
+  margin-top: 140px;
+  isolation: isolate;
+  background: var(--olive-dark);
+}
+
+.site-footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 140px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to bottom, transparent 8%, rgba(52,56,23,.08) 24%, rgba(52,56,23,.38) 53%, rgba(52,56,23,.78) 80%, var(--olive-dark) 100%),
+    conic-gradient(var(--olive-dark) 25%, var(--cream) 0 50%, var(--olive-dark) 0 75%, var(--cream) 0);
+  background-size: 100% 100%, 112px 112px;
+  background-position: center, left top;
+}
+
+@media (max-width: 760px) {
+    .site-footer { margin-top: 100px; }
+    .site-footer::before { height: 100px; background-size: 100% 100%, 72px 72px; }
+}

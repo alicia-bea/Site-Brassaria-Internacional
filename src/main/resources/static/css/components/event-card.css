@@ -1,0 +1,124 @@
+/* ==========================================================
+   components/event-card.css
+   Grade e cards de eventos, estado vazio e botões Editar/Excluir.
+   ========================================================== */
+
+
+/* Botões de editar/excluir nos cards de evento */
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;      /* empurra os botões para o fim do card */
+    padding-top: 16px;     /* espaço mínimo em relação ao texto acima */
+    flex-wrap: wrap;
+}
+
+.event-actions .btn {
+    min-height: 38px;
+    font-size: 14px;
+    padding: 6px 18px;
+}
+
+/* sem o "pulo" do hover geral dos .btn, para Editar e Excluir ficarem sempre alinhados */
+.event-actions .btn:hover {
+    transform: none;
+}
+
+.event-actions .btn:not(.btn-light) {
+    background: transparent;
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+.event-actions .btn:not(.btn-light):hover {
+    background: var(--gold);
+    color: var(--olive-dark);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(22px, 4.5vw, 76px);
+    padding: 0 7%;
+}
+
+.event-card {
+    background: var(--olive);
+    color: #fff;
+    border: 3px solid var(--gold);
+    border-radius: 16px;
+    padding: 14px 15px 16px;
+    min-height: 224px;
+    box-shadow: 0 2px 0 rgba(65, 69, 31, .12);
+}
+
+.event-date {
+    display: inline-block;
+    background: var(--pale);
+    color: var(--ink);
+    padding: 6px 19px;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    font-size: 23px;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid var(--gold);
+    font-weight: 700;
+}
+
+.event-card p {
+    font-size: 18px;
+    line-height: 1.24;
+    margin: 8px 0;
+    color: #fff;
+}
+
+.event-location {
+    font-size: 19px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    color: var(--olive);
+    font-size: 20px;
+}
+
+@media (max-width: 1100px) {
+    .events-grid {
+        padding: 0 2%;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 760px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+        max-width: 470px;
+        margin: auto;
+    }
+    .event-card {
+        min-height: 0;
+    }
+}
+
+.events-grid { padding:0; gap:24px; }
+
+.event-card { border:1px solid rgba(65,69,31,.16); border-radius:12px; box-shadow:var(--shadow); transition:transform .2s,box-shadow .2s; }
+
+.event-card:hover { transform:translateY(-4px); box-shadow:0 26px 55px rgba(35,40,20,.18); }
+
+.event-card { padding:24px; display:flex; flex-direction:column; }
+
+.event-date { align-self:flex-start; }

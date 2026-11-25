@@ -1,0 +1,122 @@
+/* ==========================================================
+   components/event-form.css
+   Formulário de cadastro/edição de eventos.
+   ========================================================== */
+
+
+.form-heading {
+    margin-bottom: 55px;
+}
+
+.form-layout {
+    padding: 0 2.5%;
+}
+
+.event-form {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 28px;
+    align-items: center;
+}
+
+.event-form label {
+    font: 600 25px/1.1 var(--display);
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.event-form input,
+.event-form textarea {
+    width: 100%;
+    border: 2px solid var(--ink);
+    border-radius: 36px;
+    background: var(--pale);
+    padding: 11px 30px;
+    color: var(--ink);
+    font: 600 19px var(--serif);
+    outline: none;
+    min-height: 48px;
+}
+
+.event-form textarea {
+    height: 48px;
+    min-height: 48px;
+    resize: vertical;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(239, 169, 0, .25);
+}
+
+.event-form .date-input {
+    max-width: 175px;
+}
+
+.form-actions {
+    grid-column: 2;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.form-status {
+    grid-column: 2;
+    font: 16px Arial, sans-serif;
+    color: var(--olive);
+    margin: 0;
+}
+
+.form-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0 3% -5px auto;
+    color: #765538;
+}
+
+@media (max-width: 760px) {
+    .event-form {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    .event-form label {
+        font-size: 22px;
+        margin-top: 8px;
+    }
+    .event-form input,
+    .event-form textarea {
+        grid-column: 1;
+        padding: 10px 20px;
+    }
+    .event-form .date-input {
+        max-width: none;
+    }
+    .form-actions,
+    .form-status {
+        grid-column: 1;
+    }
+    .form-actions {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .form-decoration {
+        margin-top: 30px;
+    }
+}
+
+.event-form { max-width:1000px; grid-template-columns:190px minmax(0,1fr); }
+
+.event-form label { font-size:19px; color:var(--olive); }
+
+.event-form input,.event-form textarea { background:#fffdf4; border:1px solid #c7c5aa; border-radius:8px; font:500 18px var(--serif); }
+
+.event-form textarea { min-height:135px; }
+
+@media (max-width: 760px) {
+    .event-form { grid-template-columns:1fr; }
+    .event-form textarea { min-height:140px; }
+}

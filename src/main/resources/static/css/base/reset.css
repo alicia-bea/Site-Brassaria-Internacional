@@ -1,0 +1,38 @@
+/* ==========================================================
+   base/reset.css
+   Reset e estilos-base de elementos HTML (*, html, body, a, button, input...).
+   ========================================================== */
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+main {
+    min-height: 65vh;
+}
+
+body { font-family: var(--serif); line-height: 1.5; }

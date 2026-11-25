@@ -1,0 +1,52 @@
+/* ==========================================================
+   components/buttons.css
+   Botões gerais (.btn, .btn-light, .btn-small).
+   ========================================================== */
+
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 58px;
+    padding: 12px 32px;
+    border-radius: 40px;
+    border: 2px solid var(--olive);
+    background: var(--olive);
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+    transition: transform .18s, background .18s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: var(--olive-dark);
+}
+
+.btn-light {
+    background: var(--pale);
+    color: var(--olive);
+}
+
+.btn-light:hover {
+    background: #d9df83;
+    color: var(--olive);
+}
+
+.btn-small {
+    min-height: 46px;
+    font-size: 19px;
+    padding: 9px 25px;
+}
+
+@media (max-width: 760px) {
+    .btn {
+        font-size: 19px;
+        min-height: 50px;
+        padding: 9px 23px;
+    }
+}
+
+.btn { font-family: var(--display); font-size: 16px; letter-spacing: .035em; text-transform: uppercase; border-radius: 6px; min-height: 48px; }

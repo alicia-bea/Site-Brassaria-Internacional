@@ -1,0 +1,33 @@
+/* ==========================================================
+   BRASSARIA INTERNACIONAL — ponto de entrada do CSS
+   Os HTMLs carregam somente este arquivo.
+   ATENÇÃO À ORDEM: o CSS é uma cascata. Regras posteriores vencem as
+   anteriores quando têm a mesma especificidade. Não reordene os imports
+   sem testar as páginas.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+/* base */
+@import url('base/variables.css');
+@import url('base/reset.css');
+@import url('base/accessibility.css');
+/* layout */
+@import url('layout/header.css');
+@import url('layout/footer.css');
+@import url('layout/page.css');
+/* components */
+@import url('components/buttons.css');
+@import url('components/decor.css');
+@import url('components/event-search.css');
+@import url('components/event-card.css');
+@import url('components/event-pagination.css');
+@import url('components/event-form.css');
+@import url('components/carousel.css');
+@import url('components/age-gate.css');
+/* pages */
+@import url('pages/home.css');
+@import url('pages/portfolio.css');
+@import url('pages/institucional.css');
+/* legacy */
+@import url('legacy/legado.css');

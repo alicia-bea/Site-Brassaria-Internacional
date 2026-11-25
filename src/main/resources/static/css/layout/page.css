@@ -1,0 +1,64 @@
+/* ==========================================================
+   layout/page.css
+   Estrutura comum das páginas internas: seções, títulos e cabeçalho de página.
+   ========================================================== */
+
+
+.section {
+    padding: 22px clamp(24px, 6.4vw, 106px) 56px;
+}
+
+.section-title {
+    font: 600 34px/1.1 var(--display);
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 24px;
+}
+
+.page-content {
+    padding: 45px clamp(24px, 5vw, 82px) 65px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0 0 35px;
+}
+
+.page-heading .arrow-mark {
+    border-top-width: 18px;
+    border-bottom-width: 18px;
+    border-left-width: 36px;
+}
+
+.page-heading h1 {
+    font: 600 clamp(36px, 4vw, 58px)/1.05 var(--display);
+    color: var(--gold);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .section {
+        padding-bottom: 40px;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .page-heading {
+        gap: 14px;
+        align-items: flex-start;
+    }
+    .page-heading h1 {
+        font-size: 38px;
+    }
+}
+
+.section { max-width:1500px; margin:auto; padding-bottom:90px; }
+
+.section-title { color:var(--olive); font-size:clamp(30px,3vw,44px); }
+
+.page-content { max-width:1500px; margin:auto; }
+
+.page-heading h1 { color:var(--olive); }
